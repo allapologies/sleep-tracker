@@ -96,7 +96,11 @@ const btnSave      = $('btn-save');
 const resultsCard  = $('results-card');
 
 function todayStr() {
-  return new Date().toLocaleDateString('sv'); // sv locale gives YYYY-MM-DD
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
 }
 
 function loadDateIntoForm(date) {

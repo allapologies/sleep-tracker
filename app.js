@@ -115,11 +115,14 @@ function loadDateIntoForm(date) {
     qualityVal.textContent = e.quality   ?? 7;
     updatePreview();
   } else {
-    inputBed.value = inputSleep.value = inputWake.value =
-      inputWakeups.value = inputWakemins.value = '';
-    inputQuality.value = 7;
+    inputBed.value      = '21:45';
+    inputSleep.value    = '22:00';
+    inputWake.value     = '05:30';
+    inputWakeups.value  = '';
+    inputWakemins.value = '';
+    inputQuality.value  = 7;
     qualityVal.textContent = '7';
-    resultsCard.classList.add('hidden');
+    updatePreview();
   }
 }
 
